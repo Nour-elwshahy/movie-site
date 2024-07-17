@@ -1,0 +1,132 @@
+/* Global styles */
+* {
+        box-sizing: border-box;
+    }
+    
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+    
+    #sidebar {
+        width: 250px;
+        position: fixed;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        background-color: var(--primary-color, #333);
+        color: #fff;
+        padding: 20px;
+    }
+    
+    #sidebar a {
+        color: #a7a5a5;
+        text-decoration: none;
+        display: block;
+        padding: 10px 0;
+    }
+    
+    #sidebar a:hover {
+        background-color: #444;
+    }
+    
+    .content {
+        margin-left: 270px;
+        padding: 20px;
+        flex: 1;
+    }
+    
+    #movie-container, #search-results {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    img {
+        transition: opacity 0.5s ease;
+    }
+    
+    .movie {
+        width: 200px;
+        margin: 10px;
+        position: relative;
+        overflow: hidden; /* Ensure the overlay doesn't overflow */
+    }
+    
+    /* Ensure the image takes up the full width of the movie container */
+    .movie img {
+        width: 100%;
+        transition: opacity 0.3s ease;
+    }
+    
+    /* Change the opacity of the image on hover */
+    .movie:hover img {
+        opacity: 0.5;
+    }
+    
+    /* Hide movie details by default */
+    .movie-details {
+        display: none;
+        background-color: rgba(0, 0, 0, 0.7);
+        color: #fff;
+        padding: 10px;
+        border-radius: 5px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        text-align: center;
+        transition: opacity 0.3s ease;
+    }
+    
+    /* Show movie details on hover */
+    .movie:hover .movie-details {
+        display: block;
+        opacity: 1;
+    }
+    
+    #search-input {
+        margin-bottom: 20px;
+        padding: 10px;
+        width: calc(100% - 20px);
+    }
+    
+    #contact-form input, #contact-form textarea {
+        display: block;
+        width: calc(100% - 22px);
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+    
+    #contact-form button {
+        padding: 10px 20px;
+    }
+    
+    #form-messages p {
+        color: red;
+    }
+    
+    #color-picker {
+        margin-top: 20px;
+    }
+    
+    /* Popup styles */
+    #popup {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80%;
+        max-width: 600px;
+        background: #fff;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+    
+    #popup .close-btn {
+        float: right;
+        cursor: pointer;
+    }
+    

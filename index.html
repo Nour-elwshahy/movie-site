@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="sidebar">
+        <a href="#" data-category="now_playing">Now Playing</a>
+        <a href="#" data-category="popular">Popular</a>
+        <a href="#" data-category="top_rated">Top Rated</a>
+        <a href="#" data-category="trending">Trending</a>
+        <a href="#" data-category="upcoming">Upcoming</a>
+        <a href="#contact">Contact Us</a>
+        <input type="color" id="color-picker">
+    </div>
+    
+    <div class="content">
+        <input type="text" id="search-input" placeholder="Search for movies...">
+        <div id="search-results"></div>
+        <div id="movie-container"></div>
+        <form id="contact-form">
+            <input type="text" id="name" placeholder="Enter your name" required>
+            <input type="email" id="email" placeholder="Enter your email" required>
+            <input type="text" id="phone" placeholder="Enter your phone" required>
+            <input type="text" id="age" placeholder="Enter your age" required>
+            <input type="password" id="password" placeholder="Enter your password" required>
+            <input type="password" id="confirm-password" placeholder="Validate your password" required>
+            <button type="submit">Submit</button>
+        </form>
+        <div id="form-messages"></div>
+    </div> 
+    
+
+    <!-- Popup for movie details -->
+    <div id="popup">
+        <span class="close-btn" onclick="closePopup()">x</span>
+        <div id="popup-content"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
